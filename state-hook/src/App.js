@@ -16,6 +16,8 @@ import React, { useReducer } from "react";
 import CompA from "./components/CompA";
 import CompB from "./components/CompB";
 import CompC from "./components/CompC";
+import DataFetchingOne from './components/DataFetchingOne';
+import DataFetchingTwo from './components/DataFetchingTwo';
 
 
 export const UserContext = React.createContext()
@@ -41,17 +43,21 @@ function App() {
 
   const [count, dispatch] = useReducer(reducer, initialState)
   return (
+    <div className="App">
+      <DataFetchingTwo />
+    </div>
+
     
 
-      <CountContext.Provider value= {{countState: count, countDispatch: dispatch}}>
-    <div className="App">
-       Count Value: {count}
-          <CompA />
-          <CompB />
-          <CompC />
+    //   <CountContext.Provider value= {{countState: count, countDispatch: dispatch}}>
+    // <div className="App">
+    //    Count Value: {count}
+    //       <CompA />
+    //       <CompB />
+    //       <CompC />
         
-    </div>
-    </CountContext.Provider>
+    // 
+    // </CountContext.Provider>
   );
 }
 
