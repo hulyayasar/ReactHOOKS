@@ -18,6 +18,8 @@ import CompB from "./components/CompB";
 import CompC from "./components/CompC";
 import DataFetchingOne from './components/DataFetchingOne';
 import DataFetchingTwo from './components/DataFetchingTwo';
+import ParentComponent from './components/ParentComponent';
+import CountMemo from './components/CountMemo';
 
 
 export const UserContext = React.createContext()
@@ -44,7 +46,7 @@ function App() {
   const [count, dispatch] = useReducer(reducer, initialState)
   return (
     <div className="App">
-      <DataFetchingTwo />
+      <CountMemo />
     </div>
 
     
