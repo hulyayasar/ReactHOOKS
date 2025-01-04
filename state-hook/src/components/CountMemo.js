@@ -13,23 +13,20 @@ function CountMemo() {
     setCountTwo(countTwo + 1)
   }
 
-  const isEven = () => {
+  const isEven = useMemo( () => {
     let i=0
     console.log('i')
     while(i<2000000000) i++
     
     return countOne%2 === 0
 
-  }
-
-  
-
+  }, [countOne])
 
     return (
       <div >
         <div>
             <button onClick={incrementOne}> count one: {countOne}</button>
-            <span>{isEven() ? 'Even':'Odd'}</span>
+            <span>{isEven ? 'Even':'Odd'}</span>
         </div>
         <div>
             <button onClick={incrementTwo}> count two: {countTwo}</button>
