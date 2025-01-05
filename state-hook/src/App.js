@@ -22,6 +22,8 @@ import ParentComponent from './components/ParentComponent';
 import CountMemo from './components/CountMemo';
 import FocusInput from './components/FocusInput';
 import HookTimer from './components/HookTimer';
+import PRMortgageCalculator from './components/PRMortgageCalculator';
+import PRCounter from './components/PRCounter';
 
 
 export const UserContext = React.createContext()
@@ -48,7 +50,7 @@ function App() {
   const [count, dispatch] = useReducer(reducer, initialState)
   return (
     <div className="App">
-      <HookTimer />
+      <PRCounter />
     </div>
 
     
